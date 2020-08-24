@@ -1,0 +1,44 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "guidesLambda",
+            "privacy": {
+                "protected": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ],
+                "unauth": [
+                    "/GET"
+                ]
+            }
+        }
+    ],
+    "resourceName": "guidesAPI",
+    "apiName": "guidesAPI",
+    "functionArns": [
+        {
+            "lambdaFunction": "guidesLambda"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "amplify-authcra-devo-113432-authRole",
+        "unAuthRoleName": "amplify-authcra-devo-113432-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "guidesLambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

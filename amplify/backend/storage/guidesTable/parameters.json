@@ -1,0 +1,5 @@
+{
+    "tableName": "guides",
+    "partitionKeyName": "id",
+    "partitionKeyType": "S"
+}
